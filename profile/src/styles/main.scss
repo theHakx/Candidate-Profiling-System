@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  background: linear-gradient(-45deg, #0183ab, #001531, #020a2e, #350800);
+  background-size: 400% 400%;
+  animation: swoosh 60s ease-in-out infinite;
+
+}

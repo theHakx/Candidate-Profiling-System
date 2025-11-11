@@ -1,0 +1,17 @@
+@import '../UserPages/MyProfile/myProfile.scss';
+
+.public-profile-container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(-45deg, #102868, #032660, #111827, #030c82);
+  background-size: 400% 400%;
+  animation: swoosh 25s ease infinite;
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 5rem;
+  }
+  .error-message { color: #f87171; }
+}

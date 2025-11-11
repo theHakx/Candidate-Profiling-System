@@ -1,0 +1,123 @@
+@import '../../../styles/variables.scss';
+
+.bucketViewContainer {
+  padding: 2rem 4rem;
+  color: #f9fafb;
+
+  .backButton {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #f9fafb;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .bucketViewTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #9ca3af;
+    margin-bottom: 2rem;
+  }
+
+  .tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    background-color: rgba(31, 41, 55, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bucketProfileTable {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 1rem 1.5rem;
+      text-align: left;
+    }
+
+    thead {
+      background-color: rgba(55, 65, 81, 0.7);
+      th {
+        font-weight: 600;
+        color: #e5e7eb;
+      }
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .actionButton {
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.view {
+        background-color: #3b83f63d;
+      }
+    }
+  }
+
+  .paginationControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: #d1d5db;
+
+    button {
+      background-color: #374151;
+      color: white;
+      border: 1px solid #4b5563;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+
+    .bucketViewTitle {
+      font-size: 1.8rem;
+    }
+
+    .bucketProfileTable {
+      min-width: 600px; /* Ensure table takes up more width and enables horizontal scrolling */
+      th,
+      td {
+        padding: 0.8rem 1rem; /* Slightly increased padding for better readability */
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

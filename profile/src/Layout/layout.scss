@@ -1,0 +1,20 @@
+.layoutContainer {
+  display: flex;
+  min-height: 100vh;
+  position: relative; // Establishes a positioning context for the sidebar
+}
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; // Prevents horizontal scrolling on the main content area
+  // Only apply transition after the initial load
+  .layoutContainer:not(.initial-load) & {
+    transition: margin-left 0.3s ease;
+  }
+
+  &.sidebar-open {
+    margin-left: 250px;
+  }
+}

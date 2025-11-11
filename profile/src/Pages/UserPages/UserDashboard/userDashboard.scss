@@ -1,0 +1,70 @@
+.userDashboardContainer {
+  min-height: 100vh;
+  color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.userDashboardContent {
+  padding: 2rem;
+}
+
+  
+  .profile-button {
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    margin-inline: auto; /* This will center the button */
+    padding: 0.8rem;
+    background: rgba(59, 130, 246, 0.25); 
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      // transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .arrow-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover .arrow-icon {
+      transform: translateX(4px);
+    }
+  }
+
+.userDashboardTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.logoutButton {
+  background-color: #ef4444; // A nice red
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #dc2626; // Darker red on hover
+  }
+}

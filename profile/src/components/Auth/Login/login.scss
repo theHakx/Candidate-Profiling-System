@@ -1,0 +1,107 @@
+.loginContainer {
+  min-height: 100vh;
+  // Animate a larger gradient for a swooshing effect
+  background: linear-gradient(-45deg, #102868, #032660, #111827, #030c82);
+  background-size: 400% 400%;
+  animation: swoosh 25s ease infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    .loginForm {
+    background-color: rgba(255, 255, 255, 0.1); // Semi-transparent background
+    backdrop-filter: blur(10px); // The "frosted glass" effect
+    -webkit-backdrop-filter: blur(10px); // For Safari
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2); // Subtle border to catch the light
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .loginTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #f9fafb; // A light gray for the title
+}
+
+.loginInput {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); // Lighter, semi-transparent border
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05); // Even more transparent
+  color: #f9fafb; // Light text color
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.loginButton {
+  background-color: #3b82f6; // blue-500
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #2563eb; // blue-600
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.loginRedirect {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #d1d5db; // A light gray
+  text-align: center;
+
+  .loginRedirectLink {
+    color: #60a5fa; // A nice blue for the link
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.forgotPassword{
+  color: orange;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  text-align: center;
+  .forgotPasswordLink{
+    color: #cb1a0d; 
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+}
+
+@keyframes swoosh {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

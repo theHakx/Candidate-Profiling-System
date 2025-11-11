@@ -1,0 +1,297 @@
+.userProfileContainer {
+  padding: 2rem 4rem;
+  color: #f9fafb;
+  font-family: 'Poppins', sans-serif;
+
+  .backButton {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #f9fafb;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #9ca3af;
+    margin-bottom: 3rem;
+  }
+}
+
+.profile-form {
+  max-width: 900px;
+  margin-inline: auto;
+
+  .form-section {
+    background-color: rgba(31, 41, 55, 0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #d1d5db;
+      font-weight: 500;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #374151;
+      color: #f9fafb;
+      border: 1px solid #4b5563;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #60a5fa;
+        box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    &.checkbox-group {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      input[type="checkbox"] {
+        width: auto;
+      }
+    }
+  }
+
+  .errorMessage {
+    color: #f87171;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+    .save-button {
+      padding: 0.8rem 2rem;
+      background-color: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #2563eb;
+      }
+    }
+  }
+
+  .section-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+  }
+
+  .dynamic-section {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    .remove-button {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: transparent;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      &:hover { color: #f87171; }
+    }
+  }
+
+  .add-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(59, 130, 246, 0.2);
+    border: 1px dashed rgba(59, 130, 246, 0.5);
+    color: #93c5fd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-weight: 600;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: rgba(59, 130, 246, 0.3);
+      color: #fff;
+    }
+  }
+
+  .form-section > .add-button {
+    margin-top: 0;
+  }
+}
+
+.picture-upload-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  .picture-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #374151;
+    border: 2px dashed #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #6b7280;
+    font-weight: bold;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .upload-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    input[type="file"] {
+      display: none; // Hide the default input
+    }
+
+    .upload-label-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #4b5563;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover { background-color: #6b7280; }
+    }
+
+    .upload-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #16a34a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+      &:hover { background-color: #15803d; }
+    }
+
+    .remove-pic-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: transparent;
+      color: #ef4444;
+      border: 1px solid #ef4444;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      &:hover { background-color: rgba(239, 68, 68, 0.1); color: #f87171; }
+    }
+  }
+}
+
+.error-toast-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error-toast {
+  background-color: rgba(239, 68, 68, 0.9); // Red for error
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 5s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.successMessage {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: rgba(22, 163, 74, 0.9);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1001; // Ensure it's below the error container if both show
+  animation: fadeInOut 3s ease-in-out forwards;
+}
